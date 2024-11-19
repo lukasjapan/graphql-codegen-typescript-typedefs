@@ -7,11 +7,12 @@ export const plugin: PluginFunction = (schema, _documents, config) => {
   const schemaString = stripIgnoredCharacters(
     printSchemaWithDirectives(schema)
   );
+  const jsonString = JSON.stringify(schemaString);
   return {
     prepend: ["import { gql } from 'graphql-tag'"],
     content:
       [
-        `export const ${prefix}Schema = ${JSON.stringify(schemaString)};`,
+        `export const ${prefix}Schema: string = ${jsonString};`,
         `export const ${prefix}TypeDefs = gql(${prefix}Schema);`,
       ].join("\n") + "\n",
   };
