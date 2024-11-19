@@ -1,0 +1,15 @@
+{
+  "name": "graphql-codegen-typescript-typedefs",
+  "version": "0.0.1",
+  "description": "Adds the combined graphql schema (string) and type definitions (DocumentNode) to the generated typescript file.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && cat package.json | jq 'del(.scripts,.dependencies)' > dist/package.json"
+  },
+  "author": "lukasjapan",
+  "license": "MIT",
+  "dependencies": {
+    "@graphql-codegen/cli": "^5.0.3",
+    "graphql": "^16.9.0"
+  }
+}
