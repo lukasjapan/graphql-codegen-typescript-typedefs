@@ -9,7 +9,9 @@ export const plugin: PluginFunction = (schema, _documents, config) => {
   );
   const jsonString = JSON.stringify(schemaString);
   return {
-    prepend: ["import { gql } from 'graphql-tag'"],
+    prepend: [
+      `import ${config.useNamedImport ? "{ gql }" : "gql"} from 'graphql-tag'`,
+    ],
     content:
       [
         `export const ${prefix}Schema: string = ${jsonString};`,

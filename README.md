@@ -49,6 +49,10 @@ The following variables will be exported by the generated file:
 
 Prefix the variables with this string.
 
+#### useNamedImport
+
+Use `import { gql } from "graphql-tag"` instead of `import gql from "graphql-tag"`
+
 ### Example Usage
 
 ```js
