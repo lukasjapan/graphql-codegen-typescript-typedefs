@@ -49,9 +49,17 @@ The following variables will be exported by the generated file:
 
 Prefix the variables with this string.
 
+#### parseSchema
+
+Parse the schema string directly in the generated code by using `gql` from `graphql-tag`.
+
+This is useful if you want to keep the generated code as small as possible.
+
 #### useNamedImport
 
-Use `import { gql } from "graphql-tag"` instead of `import gql from "graphql-tag"`
+This option can be used together with `parseSchema`.
+
+Generate `import { gql } from "graphql-tag"` instead of `import gql from "graphql-tag"`
 
 ### Example Usage
 
