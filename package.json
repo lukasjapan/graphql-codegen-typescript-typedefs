@@ -1,6 +1,6 @@
 {
   "name": "graphql-codegen-typescript-typedefs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Adds the combined graphql schema (string) and type definitions (DocumentNode) to the generated typescript file.",
   "main": "index.js",
   "scripts": {
