@@ -3,7 +3,8 @@
     "target": "ESNext",
     "module": "commonjs",
     "outDir": "./dist",
-    "strict": true
+    "strict": true,
+    "declaration": true
   },
   "include": ["index.ts"],
   "exclude": ["node_modules"]
