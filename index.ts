@@ -3,7 +3,7 @@ import { printSchemaWithDirectives } from "@graphql-tools/utils";
 import { DocumentNode, stripIgnoredCharacters } from "graphql";
 import gql from "graphql-tag";
 
-export type GraphqQLCodegenTypescriptTypeDefsDocumentNode = DocumentNode;
+export type GraphQLCodegenTypescriptTypeDefsDocumentNode = DocumentNode;
 
 export const plugin: PluginFunction = (schema, _documents, config) => {
   const prefix = config.typesPrefix || "";
@@ -19,7 +19,7 @@ export const plugin: PluginFunction = (schema, _documents, config) => {
           } from 'graphql-tag'`,
         ]
       : [
-          `import { GraphqQLCodegenTypescriptTypeDefsDocumentNode } from 'graphql-codegen-typescript-typedefs'`,
+          `import { GraphQLCodegenTypescriptTypeDefsDocumentNode } from 'graphql-codegen-typescript-typedefs'`,
         ],
     content:
       [
@@ -29,7 +29,7 @@ export const plugin: PluginFunction = (schema, _documents, config) => {
             ? `gql(${prefix}Schema)`
             : `${JSON.stringify(
                 gql(schemaString)
-              )} as unknown as GraphqQLCodegenTypescriptTypeDefsDocumentNode`
+              )} as unknown as GraphQLCodegenTypescriptTypeDefsDocumentNode`
         };`,
       ].join("\n") + "\n",
   };
